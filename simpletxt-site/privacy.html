@@ -5,33 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>隐私政策 | Privacy Policy | SimpleTXT</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #333; }
-    h1, h2 { color: #0077cc; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 语言切换控制 */
+    html[lang="zh-CN"] .en { display: none; }
+    html[lang="en"] .zh { display: none; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      color: #2c3e50;
+      background: #f5f7fa;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px 60px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0077cc;
+      margin-bottom: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #0077cc;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    h2:first-of-type {
+      margin-top: 24px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 28px;
+    }
+
+    li {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: #e8f4fd;
+      color: #0077cc;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      margin: 24px 0;
+      padding: 20px 24px;
+      background: #e8f4fd;
+      border-radius: 8px;
+      border-left: 4px solid #0077cc;
+    }
+
+    .highlight-box p {
+      margin: 8px 0;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    .contact-box {
+      margin-top: 40px;
+      padding: 24px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #0077cc;
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>隐私政策 | Privacy Policy</h1>
-  <p><strong>生效日期 / Effective Date：</strong>2025-12-25</p>
+  <div class="container">
+    <h1><span class="zh">隐私政策</span><span class="en">Privacy Policy</span></h1>
+    <div style="text-align: center;">
+      <span class="date-badge"><strong><span class="zh">生效日期：</span><span class="en">Effective Date: </span></strong>2025-12-25</span>
+    </div>
 
-  <h2>简介 / Introduction</h2>
-  <p>SimpleTXT（以下简称“本应用”）是一款本地 TXT 阅读工具，不会上传、存储或共享任何用户数据。</p>
-  <p>SimpleTXT is a local TXT reader that does not upload, store, or share any user data.</p>
+    <h2><span class="zh">简介</span><span class="en">Introduction</span></h2>
+    <p class="zh">SimpleTXT（以下简称"本应用"）是一款本地 TXT 阅读工具，不会上传、存储或共享任何用户数据。</p>
+    <p class="en">SimpleTXT is a local TXT reader that does not upload, store, or share any user data.</p>
 
-  <h2>我们收集的数据 / Data We Collect</h2>
-  <p>本应用不收集任何可识别个人信息，也不会连接互联网。</p>
-  <p>This app collects no personal information and does not connect to the internet.</p>
+    <div class="highlight-box">
+      <p><span class="zh">✓ 完全离线运行</span><span class="en">✓ Fully Offline</span></p>
+      <p><span class="zh">✓ 零数据收集</span><span class="en">✓ Zero Data Collection</span></p>
+      <p><span class="zh">✓ 无第三方追踪</span><span class="en">✓ No Third-Party Tracking</span></p>
+    </div>
 
-  <h2>文件与权限说明 / Files & Permissions</h2>
-  <ul>
-    <li><strong>存储权限（Storage Access）</strong>：仅用于读取您选择的 TXT 文件。</li>
-    <li><strong>Wi-Fi 传输</strong>：仅在局域网中进行文件传输，不上传至服务器。</li>
-  </ul>
+    <h2><span class="zh">我们收集的数据</span><span class="en">Data We Collect</span></h2>
+    <p class="zh">本应用不收集任何可识别个人信息，也不会连接互联网。</p>
+    <p class="en">This app collects no personal information and does not connect to the internet.</p>
 
-  <h2>数据安全 / Data Security</h2>
-  <p>所有数据均保留在您的设备中，不会被开发者访问或存储。</p>
-  <p>All data stays on your device and is never accessed by the developer.</p>
+    <h2><span class="zh">文件与权限说明</span><span class="en">Files & Permissions</span></h2>
+    <ul>
+      <li class="zh"><strong>存储权限</strong>：仅用于读取您选择的 TXT 文件。</li>
+      <li class="en"><strong>Storage Access</strong>: Only used to read the TXT files you select.</li>
+      <li class="zh"><strong>Wi-Fi 传输</strong>：仅在局域网中进行文件传输，不上传至服务器。</li>
+      <li class="en"><strong>Wi-Fi Transfer</strong>: File transfer only happens within your local network, never uploaded to servers.</li>
+    </ul>
 
-  <h2>联系我们 / Contact</h2>
-  <p>Email: smilemaisel@gmail.com</p>
+    <h2><span class="zh">数据安全</span><span class="en">Data Security</span></h2>
+    <p class="zh">所有数据均保留在您的设备中，不会被开发者访问或存储。</p>
+    <p class="en">All data stays on your device and is never accessed by the developer.</p>
+
+    <div class="contact-box">
+      <h2><span class="zh">联系我们</span><span class="en">Contact</span></h2>
+      <p>Email: <a href="mailto:smilemaisel@gmail.com">smilemaisel@gmail.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    // 自动检测浏览器语言并设置
+    (function() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const isEnglish = userLang.startsWith('en');
+      document.documentElement.lang = isEnglish ? 'en' : 'zh-CN';
+    })();
+  </script>
 </body>
 </html>
