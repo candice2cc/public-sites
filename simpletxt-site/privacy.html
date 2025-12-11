@@ -16,12 +16,12 @@
     html[lang="en"] .zh { display: none; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
       line-height: 1.8;
       color: #2c3e50;
       background: #f5f7fa;
       min-height: 100vh;
-      padding: 16px;
+      padding: 20px 16px 60px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -32,15 +32,25 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
+      background: #ffffff;
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body[data-theme="dark"] .container {
+      background: #2a2a2c;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
       font-size: 2rem;
       color: #0077cc;
-      margin-bottom: 16px;
-      font-weight: 600;
+      margin-bottom: 12px;
+      font-weight: 700;
       text-align: center;
       transition: color 0.3s ease;
     }
@@ -49,26 +59,103 @@
       color: #4da6ff;
     }
 
+    .date-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: #e8f4fd;
+      color: #0077cc;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .date-badge {
+      background: #2c3e50;
+      color: #4da6ff;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      color: #34495e;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .intro-text {
+      color: #c0c0c0;
+    }
+
+    .important-notice {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #856404;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .important-notice {
+      background: #3d3520;
+      border-left-color: #ffc107;
+      color: #ffd966;
+    }
+
+    .divider {
+      border: none;
+      border-top: 2px solid #e0e0e0;
+      margin: 32px 0;
+      transition: border-color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .divider {
+      border-top-color: #3a3a3c;
+    }
+
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #0077cc;
       margin-top: 32px;
       margin-bottom: 16px;
       font-weight: 600;
-      transition: color 0.3s ease;
+      padding-left: 12px;
+      border-left: 4px solid #0077cc;
+      transition: color 0.3s ease, border-color 0.3s ease;
     }
 
     body[data-theme="dark"] h2 {
       color: #4da6ff;
+      border-left-color: #4da6ff;
     }
 
     h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #2c3e50;
       margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] h3 {
+      color: #e0e0e0;
     }
 
     p {
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #555;
       line-height: 1.8;
       transition: color 0.3s ease;
@@ -90,12 +177,12 @@
 
     ul {
       margin: 16px 0;
-      padding-left: 28px;
+      padding-left: 32px;
     }
 
     li {
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #555;
       line-height: 1.8;
       transition: color 0.3s ease;
@@ -103,23 +190,6 @@
 
     body[data-theme="dark"] li {
       color: #b0b0b0;
-    }
-
-    .date-badge {
-      display: inline-block;
-      background: #e8f4fd;
-      color: #0077cc;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-      font-weight: 500;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    body[data-theme="dark"] .date-badge {
-      background: #2c3e50;
-      color: #4da6ff;
     }
 
     .highlight-box {
@@ -137,14 +207,28 @@
     }
 
     .highlight-box p {
-      margin: 8px 0;
       color: #0077cc;
       font-weight: 500;
+      margin: 8px 0;
       transition: color 0.3s ease;
     }
 
     body[data-theme="dark"] .highlight-box p {
       color: #4da6ff;
+    }
+
+    .info-box {
+      margin: 20px 0;
+      padding: 16px 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #6c757d;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .info-box {
+      background: #2a2a2c;
+      border-left-color: #888;
     }
 
     .contact-box {
@@ -164,10 +248,12 @@
     .contact-box h2 {
       margin-top: 0;
       margin-bottom: 12px;
+      border-left: none;
+      padding-left: 0;
     }
 
     .contact-box p {
-      margin: 0;
+      margin: 8px 0;
       font-size: 1rem;
     }
 
@@ -185,44 +271,225 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 12px 12px 40px;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.05rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1><span class="zh">隐私政策</span><span class="en">Privacy Policy</span></h1>
-    <div style="text-align: center;">
-      <span class="date-badge"><strong><span class="zh">生效日期：</span><span class="en">Effective Date: </span></strong>2025-12-25</span>
+    <h1><span class="zh">SimpleTXT 隐私政策</span><span class="en">SimpleTXT Privacy Policy</span></h1>
+
+    <div class="date-section">
+      <span class="date-badge">
+        <span class="zh">最后更新日期：2025 年 12 月 11 日</span>
+        <span class="en">Last Updated: December 11, 2025</span>
+      </span>
     </div>
 
-    <h2><span class="zh">简介</span><span class="en">Introduction</span></h2>
-    <p class="zh">SimpleTXT（以下简称"本应用"）是一款本地 TXT 阅读工具，不会上传、存储或共享任何用户数据。</p>
-    <p class="en">SimpleTXT is a local TXT reader that does not upload, store, or share any user data.</p>
+    <p class="intro-text zh">SimpleTXT（以下简称"本应用"）是一款本地 TXT 文件阅读工具。我们非常重视您的隐私与数据安全。本隐私政策旨在说明本应用的隐私处理方式。</p>
+    <p class="intro-text en">SimpleTXT (hereinafter referred to as "the App") is a local TXT file reading tool. We value your privacy and data security. This privacy policy explains how the App handles your privacy.</p>
 
-    <div class="highlight-box">
-      <p><span class="zh">✓ 完全离线运行</span><span class="en">✓ Fully Offline</span></p>
-      <p><span class="zh">✓ 零数据收集</span><span class="en">✓ Zero Data Collection</span></p>
-      <p><span class="zh">✓ 无第三方追踪</span><span class="en">✓ No Third-Party Tracking</span></p>
+    <div class="important-notice">
+      <strong><span class="zh">使用本应用即表示您同意本隐私政策的内容。</span><span class="en">By using this App, you agree to the contents of this Privacy Policy.</span></strong>
     </div>
 
-    <h2><span class="zh">我们收集的数据</span><span class="en">Data We Collect</span></h2>
-    <p class="zh">本应用不收集任何可识别个人信息，也不会连接互联网。</p>
-    <p class="en">This app collects no personal information and does not connect to the internet.</p>
+    <hr class="divider">
 
-    <h2><span class="zh">文件与权限说明</span><span class="en">Files & Permissions</span></h2>
+    <h2><span class="zh">1. 我们收集的信息</span><span class="en">1. Information We Collect</span></h2>
+
+    <h3><span class="zh">1.1 本应用不收集任何个人信息</span><span class="en">1.1 The App Does Not Collect Any Personal Information</span></h3>
+    <p class="zh">本应用不会主动收集或上传任何可识别个人身份的信息，包括但不限于：</p>
+    <p class="en">The App does not actively collect or upload any personally identifiable information, including but not limited to:</p>
     <ul>
-      <li class="zh"><strong>存储权限</strong>：仅用于读取您选择的 TXT 文件。</li>
-      <li class="en"><strong>Storage Access</strong>: Only used to read the TXT files you select.</li>
-      <li class="zh"><strong>Wi-Fi 传输</strong>：仅在局域网中进行文件传输，不上传至服务器。</li>
-      <li class="en"><strong>Wi-Fi Transfer</strong>: File transfer only happens within your local network, never uploaded to servers.</li>
+      <li class="zh">姓名</li>
+      <li class="en">Name</li>
+      <li class="zh">电话</li>
+      <li class="en">Phone Number</li>
+      <li class="zh">邮箱</li>
+      <li class="en">Email Address</li>
+      <li class="zh">位置信息</li>
+      <li class="en">Location Information</li>
+      <li class="zh">身份证件信息</li>
+      <li class="en">Identity Document Information</li>
+      <li class="zh">设备唯一标识符（例如 IMEI、Android ID）</li>
+      <li class="en">Device Unique Identifiers (e.g., IMEI, Android ID)</li>
+    </ul>
+    <p class="zh">我们不会追踪您的行为，也不进行分析、画像、广告投放等。</p>
+    <p class="en">We do not track your behavior, nor do we perform analytics, profiling, or ad targeting.</p>
+
+    <h3><span class="zh">1.2 文件内容</span><span class="en">1.2 File Contents</span></h3>
+    <p class="zh">无论是：</p>
+    <p class="en">Whether:</p>
+    <ul>
+      <li class="zh">您通过系统文件选择器（SAF）导入的 TXT 文件</li>
+      <li class="en">TXT files imported via the system file picker (SAF)</li>
+      <li class="zh">通过 Wi-Fi 传输导入的 TXT 文件</li>
+      <li class="en">TXT files imported via Wi-Fi transfer</li>
+    </ul>
+    <p class="zh"><strong>本应用均不会上传、存储或分析这些文件内容。</strong></p>
+    <p class="en"><strong>The App will NOT upload, store, or analyze these file contents.</strong></p>
+    <p class="zh">文件内容仅用于本地阅读，不会离开您的设备。</p>
+    <p class="en">File contents are only used for local reading and never leave your device.</p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">2. 数据的使用与处理方式</span><span class="en">2. How Data Is Used and Processed</span></h2>
+
+    <h3><span class="zh">2.1 本地处理</span><span class="en">2.1 Local Processing</span></h3>
+    <p class="zh">无论是阅读、解析、换页、还是设置调整，本应用所有功能均在设备本地运行，不会将数据传输至任何远程服务器。</p>
+    <p class="en">All functions of the App—reading, parsing, page turning and settings adjustments—run locally on your device and do not transmit data to any remote servers.</p>
+
+    <h3><span class="zh">2.2 Wi-Fi 传输模式的数据处理</span><span class="en">2.2 Data Processing in Wi-Fi Transfer Mode</span></h3>
+    <p class="zh">当使用 Wi-Fi 导入文件时：</p>
+    <p class="en">When using Wi-Fi to import files:</p>
+    <ul>
+      <li class="zh">文件通过您的局域网在电脑与手机之间点对点传输</li>
+      <li class="en">Files are transferred point-to-point between your computer and phone via your local network</li>
+      <li class="zh">数据仅在您的设备与局域网内部流动</li>
+      <li class="en">Data only flows within your devices and local network</li>
+      <li class="zh">本应用不连接外部服务器，也不上传任何数据</li>
+      <li class="en">The App does not connect to external servers or upload any data</li>
+    </ul>
+    <p class="zh">我们不记录、不保存、不共享 Wi-Fi 导入过程中的任何信息。</p>
+    <p class="en">We do not record, save, or share any information during the Wi-Fi import process.</p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">3. 数据共享</span><span class="en">3. Data Sharing</span></h2>
+    <p class="zh"><strong>本应用不会与任何第三方共享您的任何信息或文件内容。</strong></p>
+    <p class="en"><strong>The App does not share any information or file contents with any third parties.</strong></p>
+    <p class="zh">不会共享：</p>
+    <p class="en">We do not share:</p>
+    <ul>
+      <li class="zh">文件内容</li>
+      <li class="en">File Contents</li>
+      <li class="zh">使用数据</li>
+      <li class="en">Usage Data</li>
+      <li class="zh">设备信息</li>
+      <li class="en">Device Information</li>
+      <li class="zh">网络信息</li>
+      <li class="en">Network Information</li>
+      <li class="zh">任何个人信息</li>
+      <li class="en">Any Personal Information</li>
     </ul>
 
-    <h2><span class="zh">数据安全</span><span class="en">Data Security</span></h2>
-    <p class="zh">所有数据均保留在您的设备中，不会被开发者访问或存储。</p>
-    <p class="en">All data stays on your device and is never accessed by the developer.</p>
+    <hr class="divider">
+
+    <h2><span class="zh">4. 权限说明（遵守 Android 10+ / Android 13+ 政策）</span><span class="en">4. Permissions Explained (Compliant with Android 10+ / 13+ Policies)</span></h2>
+    <p class="zh">本应用遵循最新的 Android 隐私权限规范。</p>
+    <p class="en">The App complies with the latest Android privacy permission standards.</p>
+
+    <h3><span class="zh">4.1 文件访问权限（无需传统存储权限）</span><span class="en">4.1 File Access Permissions (No Traditional Storage Permissions Required)</span></h3>
+    <p class="zh"><strong>本应用不会申请 READ_EXTERNAL_STORAGE 或 WRITE_EXTERNAL_STORAGE 权限。</strong></p>
+    <p class="en"><strong>The App does not request READ_EXTERNAL_STORAGE or WRITE_EXTERNAL_STORAGE permissions.</strong></p>
+    <p class="zh">本应用通过 Storage Access Framework（SAF）访问文件：</p>
+    <p class="en">The App accesses files through the Storage Access Framework (SAF):</p>
+    <ul>
+      <li class="zh">文件由您通过系统文件选择器手动选取</li>
+      <li class="en">Files are manually selected by you through the system file picker</li>
+      <li class="zh">应用只能访问您明确选择的文件</li>
+      <li class="en">The App can only access files you explicitly choose</li>
+      <li class="zh">无法访问未授权的文件或目录</li>
+      <li class="en">Cannot access unauthorized files or directories</li>
+    </ul>
+
+    <h3><span class="zh">4.2 Wi-Fi 传输相关的网络访问</span><span class="en">4.2 Network Access for Wi-Fi Transfer</span></h3>
+    <p class="zh">Wi-Fi 导入方式需要使用：</p>
+    <p class="en">Wi-Fi import requires:</p>
+    <ul>
+      <li class="zh">网络访问权限（INTERNET）</li>
+      <li class="en">Network Access Permission (INTERNET)</li>
+      <li class="zh">本地局域网通信</li>
+      <li class="en">Local Network Communication</li>
+    </ul>
+    <p class="zh"><strong>用途：</strong>用于建立手机与电脑之间的局域网传输通道，使 TXT 文件能通过 Wi-Fi 导入到手机。</p>
+    <p class="en"><strong>Purpose:</strong> To establish a local network transfer channel between phone and computer, enabling TXT files to be imported to the phone via Wi-Fi.</p>
+    <p class="zh">我们不会利用网络权限上传数据、连接外部服务器、收集网络信息。</p>
+    <p class="en">We do not use network permissions to upload data, connect to external servers, or collect network information.</p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">5. 第三方服务</span><span class="en">5. Third-Party Services</span></h2>
+    <p class="zh"><strong>本应用不集成任何第三方 SDK，包括：</strong></p>
+    <p class="en"><strong>The App does not integrate any third-party SDKs, including:</strong></p>
+    <ul>
+      <li class="zh">不使用广告 SDK</li>
+      <li class="en">No Ad SDKs</li>
+      <li class="zh">不使用统计分析 SDK</li>
+      <li class="en">No Analytics SDKs</li>
+      <li class="zh">不使用云同步、云存储服务</li>
+      <li class="en">No Cloud Sync or Storage Services</li>
+      <li class="zh">不使用第三方行为追踪工具</li>
+      <li class="en">No Third-Party Behavior Tracking Tools</li>
+    </ul>
+    <p class="zh">因此，不存在任何第三方向您收集数据的情况。</p>
+    <p class="en">Therefore, there are no third parties collecting data from you.</p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">6. 未成年人隐私保护</span><span class="en">6. Protection of Minors' Privacy</span></h2>
+    <p class="zh">本应用不针对未成年人，也不会收集任何未成年人的个人信息。</p>
+    <p class="en">The App is not targeted at minors and does not collect any personal information from minors.</p>
+    <p class="zh">即使未成年人使用本应用，我们仍不会收集其数据。</p>
+    <p class="en">Even if minors use the App, we still do not collect their data.</p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">7. 数据安全</span><span class="en">7. Data Security</span></h2>
+    <p class="zh">由于我们不上传、不存储、不共享任何数据，您文件内容的安全主要依赖于您的本地设备安全措施。</p>
+    <p class="en">Since we do not upload, store, or share any data, the security of your file contents primarily depends on your local device security measures.</p>
+    <p class="zh">我们建议您：</p>
+    <p class="en">We recommend that you:</p>
+    <ul>
+      <li class="zh">妥善保护设备</li>
+      <li class="en">Protect your device properly</li>
+      <li class="zh">避免在公共网络中使用 Wi-Fi 导入功能</li>
+      <li class="en">Avoid using Wi-Fi import on public networks</li>
+      <li class="zh">使用官方渠道下载本应用</li>
+      <li class="en">Download the App from official channels</li>
+    </ul>
+
+    <hr class="divider">
+
+    <h2><span class="zh">8. 隐私政策更新</span><span class="en">8. Privacy Policy Updates</span></h2>
+    <p class="zh">随着功能变化或法规调整，本隐私政策可能更新。</p>
+    <p class="en">This privacy policy may be updated due to feature changes or regulatory adjustments.</p>
+    <p class="zh">更新后的政策将在应用内或应用商店页面发布。</p>
+    <p class="en">Updated policies will be published within the App or on the app store page.</p>
+    <p class="zh"><strong>继续使用本应用视为接受更新内容。</strong></p>
+    <p class="en"><strong>Continued use of the App constitutes acceptance of the updated content.</strong></p>
+
+    <hr class="divider">
 
     <div class="contact-box">
-      <h2><span class="zh">联系我们</span><span class="en">Contact</span></h2>
-      <p>Email: <a href="mailto:smilemaisel@gmail.com">smilemaisel@gmail.com</a></p>
+      <h2><span class="zh">9. 联系我们</span><span class="en">9. Contact Us</span></h2>
+      <p class="zh">如果您对本隐私政策或本应用的数据处理方式有疑问，请联系我们：</p>
+      <p class="en">If you have questions about this Privacy Policy or how the App handles data, please contact us:</p>
+      <p><strong><span class="zh">邮箱：</span><span class="en">Email: </span></strong><a href="mailto:smilemaisel@gmail.com">smilemaisel@gmail.com</a></p>
     </div>
   </div>
 

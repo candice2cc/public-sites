@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>用户协议 | Terms of Use | SimpleTXT</title>
+  <title>用户协议 | Terms of Service | SimpleTXT</title>
   <style>
     * {
       margin: 0;
@@ -16,12 +16,12 @@
     html[lang="en"] .zh { display: none; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
       line-height: 1.8;
       color: #2c3e50;
       background: #f5f7fa;
       min-height: 100vh;
-      padding: 16px;
+      padding: 20px 16px 60px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -32,15 +32,25 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 860px;
       margin: 0 auto;
+      background: #ffffff;
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body[data-theme="dark"] .container {
+      background: #2a2a2c;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
       font-size: 2rem;
       color: #0077cc;
-      margin-bottom: 16px;
-      font-weight: 600;
+      margin-bottom: 12px;
+      font-weight: 700;
       text-align: center;
       transition: color 0.3s ease;
     }
@@ -49,26 +59,103 @@
       color: #4da6ff;
     }
 
+    .date-section {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .date-badge {
+      display: inline-block;
+      background: #e8f4fd;
+      color: #0077cc;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .date-badge {
+      background: #2c3e50;
+      color: #4da6ff;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      color: #34495e;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .intro-text {
+      color: #c0c0c0;
+    }
+
+    .important-notice {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #856404;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .important-notice {
+      background: #3d3520;
+      border-left-color: #ffc107;
+      color: #ffd966;
+    }
+
+    .divider {
+      border: none;
+      border-top: 2px solid #e0e0e0;
+      margin: 32px 0;
+      transition: border-color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .divider {
+      border-top-color: #3a3a3c;
+    }
+
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #0077cc;
       margin-top: 32px;
       margin-bottom: 16px;
       font-weight: 600;
-      transition: color 0.3s ease;
+      padding-left: 12px;
+      border-left: 4px solid #0077cc;
+      transition: color 0.3s ease, border-color 0.3s ease;
     }
 
     body[data-theme="dark"] h2 {
       color: #4da6ff;
+      border-left-color: #4da6ff;
     }
 
     h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #2c3e50;
       margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] h3 {
+      color: #e0e0e0;
     }
 
     p {
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       color: #555;
       line-height: 1.8;
       transition: color 0.3s ease;
@@ -88,14 +175,14 @@
       color: #e0e0e0;
     }
 
-    ul {
+    ul, ol {
       margin: 16px 0;
-      padding-left: 28px;
+      padding-left: 32px;
     }
 
     li {
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #555;
       line-height: 1.8;
       transition: color 0.3s ease;
@@ -105,21 +192,53 @@
       color: #b0b0b0;
     }
 
-    .date-badge {
-      display: inline-block;
+    .highlight-box {
+      margin: 24px 0;
+      padding: 20px 24px;
       background: #e8f4fd;
-      color: #0077cc;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-      font-weight: 500;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 8px;
+      border-left: 4px solid #0077cc;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
     }
 
-    body[data-theme="dark"] .date-badge {
+    body[data-theme="dark"] .highlight-box {
       background: #2c3e50;
+      border-left-color: #4da6ff;
+    }
+
+    .highlight-box p {
+      color: #0077cc;
+      font-weight: 500;
+      margin: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .highlight-box p {
       color: #4da6ff;
+    }
+
+    .warning-box {
+      margin: 20px 0;
+      padding: 16px 20px;
+      background: #fff3cd;
+      border-radius: 8px;
+      border-left: 4px solid #ffc107;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .warning-box {
+      background: #3d3520;
+      border-left-color: #ffc107;
+    }
+
+    .warning-box p {
+      color: #856404;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    body[data-theme="dark"] .warning-box p {
+      color: #ffd966;
     }
 
     .contact-box {
@@ -139,10 +258,12 @@
     .contact-box h2 {
       margin-top: 0;
       margin-bottom: 12px;
+      border-left: none;
+      padding-left: 0;
     }
 
     .contact-box p {
-      margin: 0;
+      margin: 8px 0;
       font-size: 1rem;
     }
 
@@ -160,40 +281,269 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 12px 12px 40px;
+      }
+
+      .container {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.05rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1><span class="zh">用户协议</span><span class="en">Terms of Use</span></h1>
-    <div style="text-align: center;">
-      <span class="date-badge"><strong><span class="zh">生效日期：</span><span class="en">Effective Date: </span></strong>2025-11-25</span>
+    <h1><span class="zh">SimpleTXT 用户协议</span><span class="en">SimpleTXT Terms of Service</span></h1>
+
+    <div class="date-section">
+      <span class="date-badge">
+        <span class="zh">最后更新日期：2025 年 12 月 11 日</span>
+        <span class="en">Last Updated: December 11, 2025</span>
+      </span>
     </div>
 
-    <h2><span class="zh">协议接受</span><span class="en">Acceptance</span></h2>
-    <p class="zh">使用本应用即表示您同意本用户协议。</p>
-    <p class="en">By using this app, you agree to these Terms of Use.</p>
+    <p class="intro-text zh">欢迎使用 SimpleTXT（以下简称"本应用"）。请在使用本应用前仔细阅读本用户协议。本协议是您与本应用开发者之间关于使用本应用所订立的法律协议。</p>
+    <p class="intro-text en">Welcome to SimpleTXT (hereinafter referred to as "the App"). Please read this Terms of Service carefully before using the App. This agreement is a legal contract between you and the App developer regarding the use of the App.</p>
 
-    <h2><span class="zh">应用说明</span><span class="en">App Description</span></h2>
-    <p class="zh">SimpleTXT 是一款本地 TXT 阅读器，支持本地导入与 Wi-Fi 传输，不会联网或上传数据。</p>
-    <p class="en">SimpleTXT is an offline TXT reader supporting local import and Wi-Fi transfer. It never uploads your data.</p>
+    <div class="important-notice">
+      <strong><span class="zh">当您安装、使用或继续使用本应用，即表示您已阅读、理解并同意本协议。如不同意，请立即停止使用本应用。</span><span class="en">By installing, using, or continuing to use this App, you acknowledge that you have read, understood, and agreed to this agreement. If you do not agree, please stop using the App immediately.</span></strong>
+    </div>
 
-    <h2><span class="zh">使用规范</span><span class="en">User Guidelines</span></h2>
+    <hr class="divider">
+
+    <h2><span class="zh">1. 服务内容</span><span class="en">1. Service Description</span></h2>
+    <p class="zh">本应用是一款本地 TXT 内容阅读工具，为用户提供：</p>
+    <p class="en">This App is a local TXT content reading tool that provides users with:</p>
     <ul>
-      <li class="zh">不得利用本应用从事违法行为；</li>
-      <li class="en">Do not use this app for illegal activities;</li>
-      <li class="zh">用户对其文件内容负责；</li>
-      <li class="en">Users are responsible for their file content;</li>
-      <li class="zh">不得尝试反编译或破解应用。</li>
-      <li class="en">Do not attempt to reverse engineer or crack the app.</li>
+      <li class="zh">系统文件选择器（SAF）导入本地 TXT 文件</li>
+      <li class="en">System file picker (SAF) to import local TXT files</li>
+      <li class="zh">在设备本地阅读、解析、翻页、设置调整等功能</li>
+      <li class="en">Local reading, parsing, page turning and settings adjustments features</li>
+      <li class="zh">通过 Wi-Fi 局域网方式导入 TXT 文件（手机与电脑在同一局域网下）</li>
+      <li class="en">Import TXT files via Wi-Fi local network (phone and computer on the same local network)</li>
+      <li class="zh">所有文件处理操作均在设备本地完成，不上传至服务器</li>
+      <li class="en">All file processing operations are completed locally on the device and not uploaded to servers</li>
+    </ul>
+    <p class="zh"><strong>本应用不提供云端同步功能，也不传输数据至外部服务器。</strong></p>
+    <p class="en"><strong>This App does not provide cloud sync functionality and does not transmit data to external servers.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">2. 用户责任</span><span class="en">2. User Responsibilities</span></h2>
+    <p class="zh">使用本应用时，您应自行确保：</p>
+    <p class="en">When using this App, you should ensure that:</p>
+    <ol>
+      <li class="zh">您导入与阅读的文件内容来源合法，且不侵犯第三方的著作权或其他权益。</li>
+      <li class="en">The content of the files you import and read is from legal sources and does not infringe upon the copyright or other rights of third parties.</li>
+      <li class="zh">您不会使用本应用浏览、存储或传输违反当地法律法规的内容。</li>
+      <li class="en">You will not use this App to browse, store, or transmit content that violates local laws and regulations.</li>
+      <li class="zh">您通过 Wi-Fi 导入的文件不追求跨设备传播敏感或受限制的内容。</li>
+      <li class="en">Files you import via Wi-Fi do not involve cross-device distribution of sensitive or restricted content.</li>
+      <li class="zh">您对使用本应用的一切行为承担全部责任。</li>
+      <li class="en">You take full responsibility for all actions related to using this App.</li>
+    </ol>
+    <p class="zh"><strong>本应用不会对您导入的文件内容进行审查或监控，相关法律责任由您自行承担。</strong></p>
+    <p class="en"><strong>This App does not review or monitor the content of files you import. You bear all legal responsibility for such content.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">3. 权限与技术说明</span><span class="en">3. Permissions and Technical Details</span></h2>
+    <p class="zh">本应用严格遵守 Android 最新隐私权限规范。</p>
+    <p class="en">This App strictly complies with the latest Android privacy permission standards.</p>
+
+    <h3><span class="zh">3.1 文件访问（SAF）</span><span class="en">3.1 File Access (SAF)</span></h3>
+    <p class="zh">本应用通过 Storage Access Framework（SAF）访问文件：</p>
+    <p class="en">This App accesses files through the Storage Access Framework (SAF):</p>
+    <ul>
+      <li class="zh">本应用不会申请传统的存储权限（如 READ_EXTERNAL_STORAGE）。</li>
+      <li class="en">This App does not request traditional storage permissions (such as READ_EXTERNAL_STORAGE).</li>
+      <li class="zh">您必须通过系统文件选择器手动选择文件后，本应用才能访问该文件。</li>
+      <li class="en">You must manually select files through the system file picker before the App can access them.</li>
+      <li class="zh">本应用只能访问您明确授权的文件，无法浏览或读取其他文件或目录。</li>
+      <li class="en">The App can only access files you explicitly authorize and cannot browse or read other files or directories.</li>
     </ul>
 
-    <h2><span class="zh">免责声明</span><span class="en">Disclaimer</span></h2>
-    <p class="zh">开发者不对因设备故障、系统错误或使用不当导致的损失负责。</p>
-    <p class="en">The developer is not responsible for damages caused by device issues, system errors, or misuse.</p>
+    <h3><span class="zh">3.2 Wi-Fi 导入相关的权限</span><span class="en">3.2 Permissions for Wi-Fi Import</span></h3>
+    <p class="zh">Wi-Fi 导入功能可能需要以下权限或能力：</p>
+    <p class="en">The Wi-Fi import feature may require the following permissions or capabilities:</p>
+    <ul>
+      <li class="zh">网络访问（INTERNET）：用于建立局域网下的文件传输通道</li>
+      <li class="en">Network Access (INTERNET): Used to establish a file transfer channel on the local network</li>
+      <li class="zh">局域网通信：用于接收您从电脑上传的 TXT 文件</li>
+      <li class="en">Local Network Communication: Used to receive TXT files uploaded from your computer</li>
+    </ul>
+    <p class="zh"><strong>本应用不会把这些网络能力用于上传数据或连接任何外部服务器。</strong></p>
+    <p class="en"><strong>This App does not use these network capabilities to upload data or connect to any external servers.</strong></p>
+
+    <h3><span class="zh">3.3 无多余权限</span><span class="en">3.3 No Excessive Permissions</span></h3>
+    <p class="zh">本应用不会主动申请以下权限：</p>
+    <p class="en">This App does not actively request the following permissions:</p>
+    <ul>
+      <li class="zh">存储权限</li>
+      <li class="en">Storage Permissions</li>
+      <li class="zh">相机权限</li>
+      <li class="en">Camera Permission</li>
+      <li class="zh">麦克风权限</li>
+      <li class="en">Microphone Permission</li>
+      <li class="zh">位置权限</li>
+      <li class="en">Location Permission</li>
+      <li class="zh">通讯录权限</li>
+      <li class="en">Contacts Permission</li>
+      <li class="zh">设备标识符读取权限</li>
+      <li class="en">Device Identifier Read Permission</li>
+    </ul>
+    <p class="zh"><strong>本应用仅使用实现功能所必需的最低权限。</strong></p>
+    <p class="en"><strong>This App only uses the minimum permissions necessary to implement its features.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">4. 知识产权</span><span class="en">4. Intellectual Property</span></h2>
+    <p class="zh">本应用的界面设计、功能设计、代码及所有相关内容的著作权均属于应用开发者所有。</p>
+    <p class="en">The copyright for the App's interface design, functional design, code, and all related content belongs to the App developer.</p>
+    <p class="zh">未经授权，您不得：</p>
+    <p class="en">Without authorization, you may not:</p>
+    <ul>
+      <li class="zh">反编译、反汇编、逆向工程本应用</li>
+      <li class="en">Decompile, disassemble, or reverse engineer the App</li>
+      <li class="zh">修改、复制、传播或出售本应用</li>
+      <li class="en">Modify, copy, distribute, or sell the App</li>
+      <li class="zh">基于本应用开发衍生产品</li>
+      <li class="en">Develop derivative products based on the App</li>
+      <li class="zh">移除或更改本应用中的版权信息</li>
+      <li class="en">Remove or alter copyright information in the App</li>
+    </ul>
+    <p class="zh"><strong>您导入和阅读的 TXT 文件内容的版权归属用户或文件原权利人，本应用不主张任何权利。</strong></p>
+    <p class="en"><strong>The copyright of TXT file content you import and read belongs to the user or the original rights holder. The App makes no claim to any rights.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">5. 隐私与数据处理</span><span class="en">5. Privacy and Data Processing</span></h2>
+    <p class="zh">请参阅《隐私政策》了解详细内容。</p>
+    <p class="en">Please refer to the Privacy Policy for detailed information.</p>
+    <p class="zh">简要概述：</p>
+    <p class="en">Brief overview:</p>
+    <div class="highlight-box">
+      <p class="zh">本应用不收集任何个人信息</p>
+      <p class="en">The App does not collect any personal information</p>
+      <p class="zh">不上传用户导入的 TXT 文件内容</p>
+      <p class="en">Does not upload TXT file content imported by users</p>
+      <p class="zh">不分享数据给第三方</p>
+      <p class="en">Does not share data with third parties</p>
+      <p class="zh">不集成广告、统计或云服务 SDK</p>
+      <p class="en">Does not integrate advertising, analytics, or cloud service SDKs</p>
+      <p class="zh">所有数据处理均在本地完成</p>
+      <p class="en">All data processing is completed locally</p>
+    </div>
+
+    <hr class="divider">
+
+    <h2><span class="zh">6. Wi-Fi 文件导入的局限与责任说明</span><span class="en">6. Limitations and Liability for Wi-Fi File Import</span></h2>
+    <p class="zh">当您使用 Wi-Fi 导入功能时：</p>
+    <p class="en">When you use the Wi-Fi import feature:</p>
+    <ul>
+      <li class="zh">文件传输在您的局域网内部完成</li>
+      <li class="en">File transfer is completed within your local network</li>
+      <li class="zh">您应确保网络环境安全</li>
+      <li class="en">You should ensure the network environment is secure</li>
+      <li class="zh">如您在不安全网络中使用该功能（如公共 Wi-Fi），由此可能带来的风险由您自行承担</li>
+      <li class="en">If you use this feature on an insecure network (such as public Wi-Fi), you assume any risks that may result</li>
+    </ul>
+    <p class="zh"><strong>本应用不保存、监控或传输 Wi-Fi 导入的数据。</strong></p>
+    <p class="en"><strong>The App does not save, monitor, or transmit data imported via Wi-Fi.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">7. 免责声明</span><span class="en">7. Disclaimer</span></h2>
+    <p class="zh">在法律允许的最大范围内，本应用及开发者对以下情况不承担责任：</p>
+    <p class="en">To the maximum extent permitted by law, the App and developer are not responsible for the following situations:</p>
+    <ol>
+      <li class="zh">您导入的文件内容导致的任何纠纷、法律问题或损害。</li>
+      <li class="en">Any disputes, legal issues, or damages resulting from the content of files you import.</li>
+      <li class="zh">因设备故障、操作系统问题、第三方软件导致的应用无法正常运行。</li>
+      <li class="en">The App's inability to function properly due to device failures, operating system issues, or third-party software.</li>
+      <li class="zh">Wi-Fi 导入过程中的网络安全风险。</li>
+      <li class="en">Network security risks during the Wi-Fi import process.</li>
+      <li class="zh">因不可抗力导致的服务中断、数据丢失或功能异常。</li>
+      <li class="en">Service interruptions, data loss, or functional abnormalities caused by force majeure.</li>
+      <li class="zh">本应用无法满足您特定需求或期望。</li>
+      <li class="en">The App's inability to meet your specific needs or expectations.</li>
+    </ol>
+    <p class="zh"><strong>本应用按"现状"提供，不保证功能适用于所有设备与环境。</strong></p>
+    <p class="en"><strong>The App is provided "as is" and does not guarantee functionality for all devices and environments.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">8. 使用限制</span><span class="en">8. Usage Restrictions</span></h2>
+    <p class="zh">您不得使用本应用从事以下行为：</p>
+    <p class="en">You may not use this App to engage in the following activities:</p>
+    <ul>
+      <li class="zh">违反法律法规的行为</li>
+      <li class="en">Activities that violate laws and regulations</li>
+      <li class="zh">浏览、存储、传输违法内容</li>
+      <li class="en">Browse, store, or transmit illegal content</li>
+      <li class="zh">破坏或尝试破坏应用正常运行</li>
+      <li class="en">Damage or attempt to damage the normal operation of the App</li>
+      <li class="zh">利用本应用进行网络攻击或传播恶意程序</li>
+      <li class="en">Use the App to conduct network attacks or spread malicious programs</li>
+      <li class="zh">未经许可对本应用进行商业使用、出售或再分发</li>
+      <li class="en">Commercially use, sell, or redistribute the App without permission</li>
+    </ul>
+    <p class="zh"><strong>开发者有权在无需告知的情况下终止您对本应用的使用（例如严重违规行为）。</strong></p>
+    <p class="en"><strong>The developer reserves the right to terminate your use of the App without notice (e.g., for serious violations).</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">9. 服务变更与终止</span><span class="en">9. Service Changes and Termination</span></h2>
+    <p class="zh">开发者保留随时：</p>
+    <p class="en">The developer reserves the right at any time to:</p>
+    <ul>
+      <li class="zh">修改应用功能</li>
+      <li class="en">Modify app features</li>
+      <li class="zh">更新或终止服务</li>
+      <li class="en">Update or terminate services</li>
+      <li class="zh">停止维护或发布更新</li>
+      <li class="en">Stop maintenance or release updates</li>
+    </ul>
+    <p class="zh">的权利，无需事先通知。</p>
+    <p class="en">without prior notice.</p>
+    <p class="zh"><strong>如本应用停止服务或下架，存储在您设备中的文件不会被删除。</strong></p>
+    <p class="en"><strong>If the App stops service or is removed, files stored on your device will not be deleted.</strong></p>
+
+    <hr class="divider">
+
+    <h2><span class="zh">10. 协议更新</span><span class="en">10. Agreement Updates</span></h2>
+    <p class="zh">随着业务调整或法律法规的变化，本协议可能会更新。</p>
+    <p class="en">This agreement may be updated due to business adjustments or changes in laws and regulations.</p>
+    <p class="zh">更新后的协议将在应用内或应用商店页面公开发布并立即生效。</p>
+    <p class="en">Updated agreements will be publicly posted within the App or on the app store page and take effect immediately.</p>
+    <p class="zh"><strong>您继续使用本应用即表示接受最新的协议内容。</strong></p>
+    <p class="en"><strong>Your continued use of the App constitutes acceptance of the latest agreement content.</strong></p>
+
+    <hr class="divider">
 
     <div class="contact-box">
-      <h2><span class="zh">联系我们</span><span class="en">Contact</span></h2>
-      <p>Email: <a href="mailto:smilemaisel@gmail.com">smilemaisel@gmail.com</a></p>
+      <h2><span class="zh">11. 联系方式</span><span class="en">11. Contact Information</span></h2>
+      <p class="zh">若您对本协议有任何问题，请联系我们：</p>
+      <p class="en">If you have any questions about this agreement, please contact us:</p>
+      <p><strong><span class="zh">邮箱：</span><span class="en">Email: </span></strong><a href="mailto:smilemaisel@gmail.com">smilemaisel@gmail.com</a></p>
     </div>
   </div>
 
