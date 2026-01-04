@@ -495,10 +495,11 @@
 
   <script>
     // 自动检测浏览器语言并设置
+    // 默认使用英语，仅在浏览器语言为中文时使用中文
     (function() {
       const userLang = navigator.language || navigator.userLanguage;
-      const isEnglish = userLang.startsWith('en');
-      document.documentElement.lang = isEnglish ? 'en' : 'zh-CN';
+      const isChinese = userLang.startsWith('zh');
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
     })();
 
     // 接收来自Android的主题信息并切换主题
